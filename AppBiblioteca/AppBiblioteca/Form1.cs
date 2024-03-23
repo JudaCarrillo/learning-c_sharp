@@ -30,14 +30,32 @@ namespace AppBiblioteca
 
         private void materiasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // this.Hide();
             frm_subject frm = new frm_subject();
-            frm.ShowDialog();
+            frm.Show();
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // this.Hide();
             frm_user frm = new frm_user();
-            frm.ShowDialog();
+            frm.Show();
+        }
+
+        private void gestiónDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_query consultas = new frm_query();
+            consultas.Show();
         }
     }
 }

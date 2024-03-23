@@ -59,6 +59,19 @@ namespace AppBiblioteca.DAL
             return true;
         }
 
+        public object ExecuteScalar(SqlCommand cmd)
+        {
+            object result = null;
+            using (SqlConnection connection = Connect())
+            {
+                connection.Open();
+                cmd.Connection = connection;
+                result = cmd.ExecuteScalar();
+            }
+            return result;
+        }
+
+
     }
-   
+
 }
